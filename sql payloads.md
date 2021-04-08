@@ -7,8 +7,9 @@
 
 If the result is true the entry will be updated with a ‘1’ and if the result is false the entry will be updated with a ‘0’.
 
-USAGE :  regexp anyregex with or without hex encoding if
-eg: with hex encoding r to hex is 72 add 0x also,
+USAGE :  regexp "anyregex"       with or without hex encoding
+
+eg:  encoding r to hex is 72 add 0x also,
 
 ```update users set username = ‘0’ | (substr(user(),1,1) regexp 0x72) where id=14;```
 
