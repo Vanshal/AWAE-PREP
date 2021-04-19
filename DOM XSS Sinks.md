@@ -35,5 +35,9 @@ To find if any of the sinks is used in html files:
 
 ```
 while read l; do echo "--------$l-------";egrep -n "document.write\(|document.writeln\(|document.domain|innerHTML|outerHTML|insertAdjacentHTML|onevent" $l ;done < html_files
+
+
+for i in `cat sink_names`;do grep -ir $i --color;done
+
 ```
 
