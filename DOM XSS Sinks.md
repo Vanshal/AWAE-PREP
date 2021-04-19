@@ -3,6 +3,8 @@
 Source: https://portswigger.net/web-security/cross-site-scripting/dom-based
 
 ```
+Sinks:
+
 document.write()
 document.writeln()
 document.domain
@@ -10,6 +12,23 @@ someDOMElement.innerHTML
 someDOMElement.outerHTML
 someDOMElement.insertAdjacentHTML
 someDOMElement.onevent
+
+Sources:
+
+exec(location.search)
+document.URL
+document.documentURI
+document.URLUnencoded
+document.baseURI
+location
+location.search
+document.cookie
+document.referrer
+window.name
+history.pushState
+history.replaceState
+localStorage
+sessionStorage
 ```
 
 To find if any of the sinks is used in html files:
